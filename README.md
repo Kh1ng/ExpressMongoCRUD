@@ -9,10 +9,11 @@ Just a crud app for educational purposes
 Clone the repo
 
 ```bash
-git clone <repository>
-cd <repository>
+git clone https://github.com/Kh1ng/ExpressMongoCRUD.git
+cd ExpressMongoCRUD/frontend
 npm install
-
+cd ExpressMongoCRUD/backend
+npm install
 ```
 
 Start the DB
