@@ -12,7 +12,7 @@ Clone the repo
 git clone https://github.com/Kh1ng/ExpressMongoCRUD.git
 cd ExpressMongoCRUD/frontend
 npm install
-cd ExpressMongoCRUD/backend
+cd ../backend
 npm install
 ```
 
