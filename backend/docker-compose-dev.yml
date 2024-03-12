@@ -1,0 +1,9 @@
+version: '3'
+name: mongo
+services:
+  playground-web-db:
+    image: mongodb/mongodb-community-server
+    environment:
+      MONGO_INITDB_DATABASE: playground-web
+    ports:
+      - 27017:27017
