@@ -1,30 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
 import getAll from "../bin/getAll.js";
-import { useParams } from "react-router-dom";
+import fetchOne from "../bin/fetchOne.js";
 
 const Details = () => {
-  const { data } = useParams();
+  const { isPending, error, data } = useQuery({
+    queryKey: ["_id"],
+    queryFn: fetchOne,
+  });
 
-  const results = useQuery({ queryKey: [data], getAll });
-
-  if (results.isLoading) {
+  if (isPending) {
     return (
       <div className="loading-pane">
-        <h2 className="loader">🌀</h2>
+        <h2 className="loader">loading...</h2>
       </div>
     );
   }
 
-  const stuff = results;
+  if (error) {
+    return <div>ERROR!@#!@#!#!@#</div>;
+  }
 
-  console.log(stuff);
+  const name = data.name;
 
-  return (
-    <div>
-      {stuff.data.map((id) => (
-        <div key={id}>{id}</div>
-      ))}
-    </div>
-  );
+  return <div>{name}</div>;
 };
 export default Details;
