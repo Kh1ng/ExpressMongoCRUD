@@ -18,8 +18,8 @@ function App() {
       <BrowserRouter>
         <h1> NEAT-O </h1>
         <Routes>
-          <Route path="/details/" element={<Details />} />
           <Route path="/" element={<div> ROOT TOOTY </div>} />
+          <Route path="/details/" element={<Details />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

@@ -6,7 +6,7 @@ const getAll = async (queryKey) => {
     throw new Error(`getAll fetch not ok`);
   }
 
-  return apiRes.json();
+  return apiRes;
 };
 
 export default getAll;

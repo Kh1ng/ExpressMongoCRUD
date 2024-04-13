@@ -20,8 +20,14 @@ const Details = () => {
     return <div>ERROR!@#!@#!#!@#</div>;
   }
 
-  const name = data.name;
-
-  return <div>{name}</div>;
+  const todo = data.todo;
+  console.log(data.completed)
+  return (
+    <div className="todo">
+      <div>{todo}</div>
+      <div>ID: {data._id}</div>
+      <div>Due: {data.due}</div>
+    </div>
+  );
 };
 export default Details;
