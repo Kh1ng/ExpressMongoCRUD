@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
 const dataSchema = new mongoose.Schema({
-  name: {
+  todo: {
     required: true,
     type: String,
   },
-  age: {
+  due: {
     required: true,
-    type: Number,
+    type: String,
   },
 });
 

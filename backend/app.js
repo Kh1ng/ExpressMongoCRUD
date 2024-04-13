@@ -10,10 +10,10 @@ app.use(express.json());
 app.use(cors());
 const routes = require("./routes/routes");
 app.use("/api", routes);
-const port = 3000;
+const PORT = 3000;
 
 app.listen(3000, () => {
-  console.log(`Server Started at ${3000}`);
+  console.log(`Server Started at ${PORT}`);
 });
 
 mongoose.connect(mongoString);

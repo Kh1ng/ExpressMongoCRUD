@@ -6,8 +6,9 @@ module.exports = router;
 
 router.post("/post", async (req, res) => {
   const data = new Model({
-    name: req.body.name,
-    age: req.body.age,
+    todo: req.body.todo,
+    due: req.body.due,
+    completed: false
   });
   try {
     const dataToSave = await data.save();
