@@ -1,8 +1,8 @@
-# Express, Vite and MongoDB full stack application
+# Express, Vite, and MongoDB full-stack application
 
 ## Description
 
-Just a crud app for educational purposes
+Just a simple todo app
 
 ## Installation
 
@@ -27,6 +27,8 @@ docker exec -it mongo-playground-web-db-1 mongosh
 Start front and back end respectively
 
 ```bash
-npm run dev #front
-npm run start #back
+cd frontend
+npm run dev
+cd ../backend
+npm run start
 ```
